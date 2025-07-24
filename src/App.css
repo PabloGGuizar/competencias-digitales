@@ -1,42 +1,86 @@
 /* src/App.css */
 
-/* Hacemos que el contenedor principal ocupe toda la altura de la pantalla
-   y use flexbox para organizar su contenido en una columna. */
+/* Contenedor principal de la aplicación */
 .app-container {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Ocupa toda la altura de la ventana */
+  height: 100vh;
   width: 100vw;
-  background-color: #242424; /* Mantenemos el fondo oscuro */
+  background-color: #242424;
 }
 
-/* El cabezal con el título y la instrucción */
+/* Cabezal con el título y la instrucción */
 .app-header {
   padding: 20px;
   text-align: center;
   color: rgba(255, 255, 255, 0.87);
-  flex-shrink: 0; /* Evita que el cabezal se encoja */
+  flex-shrink: 0;
 }
 
-.app-header h1 {
+/* --- NUEVO: Contenedor para alinear título y subíndice --- */
+.title-container {
+  display: flex;
+  align-items: flex-end; /* Alinea la base del título con la base del icono */
+  justify-content: center;
+  gap: 5px; /* Pequeño espacio entre el título y el icono */
+}
+
+/* Estilo para el h1 que contiene el logo y el texto */
+.app-header h1.titulo-principal {
   margin: 0;
   font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
+/* --- NUEVO: Estilo para el enlace de información como subíndice --- */
+.info-link-subscript {
+  color: #aaa;
+  display: inline-block;
+  margin-bottom: 8px; /* Ajusta la posición vertical para que parezca un subíndice */
+  transition: color 0.2s ease;
+}
+
+.info-link-subscript:hover {
+  color: #646cff;
+}
+/* --- FIN DE ESTILOS NUEVOS --- */
+
+/* Estilo para el párrafo de instrucción */
 .app-header p {
-  margin: 5px 0 0;
+  margin: 15px 0 0;
   color: #aaa;
 }
 
-/* Hacemos que el componente ReactFlow (que es el .react-flow) 
-   crezca para ocupar todo el espacio restante. */
+/* El mapa conceptual (componente ReactFlow) ocupa el espacio restante */
 .react-flow {
-  flex-grow: 1; /* ¡Esta es la propiedad mágica! */
+  flex-grow: 1;
 }
 
-.titulo-principal {
-  display: flex; /* Convierte el h1 en un contenedor flexible */
-  align-items: center; /* Alinea la imagen y el texto verticalmente al centro */
-  gap: 15px; /* Crea un espacio de 15px entre la imagen y el texto */
-  justify-content: center; /* Opcional: centra todo el título en su contenedor */
+/* Estilos para el pie de página */
+.app-footer {
+  text-align: center;
+  color: #aaa;
+  font-size: 0.7em;
+  background-color: #1a1a1a;
+  flex-shrink: 0;
+  border-top: 1px solid #333;
+}
+
+.app-footer p {
+  margin: 4px 0;
+}
+
+.app-footer strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.app-footer em {
+  margin-top: 10px;
+  display: inline-block;
+  font-style: normal;
+  color: #ccc;
 }
