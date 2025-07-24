@@ -1,0 +1,45 @@
+/* Contenedor principal del mapa */
+.map-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Estilos para los nodos (no interactivos) */
+.react-flow__node.nodo-central,
+.react-flow__node.nodo-area {
+  padding: 15px 20px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+}
+
+.react-flow__node.nodo-central {
+  background-color: #7b1fa2; /* Morado para destacar */
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.react-flow__node.nodo-area {
+  background-color: #535bf2; /* Azul */
+}
+
+/* Estilo para las tarjetas de competencias (los nodos hijos) */
+.react-flow__node.nodo-competencia-hijo {
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-color: #3a3a3a;
+  color: white;
+  border: 2px solid #555;
+  text-align: center;
+  transition: all 0.2s ease-out;
+
+  /* --- CAMBIO CLAVE AQUÍ --- */
+  /* Esta línea hace que el cursor cambie al pasar por encima */
+  cursor: pointer;
+}
+
+.react-flow__node.nodo-competencia-hijo:hover {
+  border-color: #8c92ff;
+  transform: translateY(-3px); /* Un pequeño efecto de elevación */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
