@@ -14,7 +14,7 @@ function App() {
         <div className="title-container">
           <h1 className="titulo-principal">
             <img width="40" src={logoUrl} alt="logo" />
-            <span>Marco de Competencia Digital</span>
+            <span>Reto 3. Las competencias digitales</span>
           </h1>
           <a
             href="https://www.boe.es/boe/dias/2020/07/13/pdfs/BOE-A-2020-7775.pdf"
