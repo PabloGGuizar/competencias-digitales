@@ -2,17 +2,21 @@
 
 import React from 'react';
 import { MapaConceptual } from './components/MapaConceptual';
-import './App.css'; // Importamos un nuevo archivo de estilos para la App
+import './App.css';
 
 function App() {
+  // Esta línea construye la URL correcta automáticamente
+  const logoUrl = `${import.meta.env.BASE_URL}mapa-mental.png`;
+
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1 class="titulo-principal">
-          <img width="40" src="/mapa-mental.png" alt="logo" />
-          <span>Marco de Competencias Digitales</span>
+        <h1 className="titulo-principal">
+          {/* Aquí usamos la variable con la URL correcta */}
+          <img width="40" src={logoUrl} alt="logo" />
+          <span>Marco de Competencia Digital</span>
         </h1>
-        <p>👇 Haz clic en las competencias para ver más detalles</p>
+        <p>Haz clic en las competencias para ver más detalles</p>
       </header>
       <MapaConceptual />
     </div>
