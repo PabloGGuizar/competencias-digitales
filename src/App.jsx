@@ -5,6 +5,7 @@ import { MapaConceptual } from './components/MapaConceptual';
 import './App.css';
 
 function App() {
+  // Esta línea construye la URL correcta automáticamente
   const logoUrl = `${import.meta.env.BASE_URL}mapa-mental.png`;
 
   return (
@@ -14,7 +15,7 @@ function App() {
         <div className="title-container">
           <h1 className="titulo-principal">
             <img width="40" src={logoUrl} alt="logo" />
-            <span>Reto 3. Las competencias digitales</span>
+            <span>Marco de Competencia Digital</span>
           </h1>
           <a
             href="https://www.boe.es/boe/dias/2020/07/13/pdfs/BOE-A-2020-7775.pdf"
@@ -33,16 +34,7 @@ function App() {
 
         <p>Haz clic en las competencias para ver más detalles</p>
       </header>
-
       <MapaConceptual />
-
-      <footer className="app-footer">
-        <p><strong>UVEG Maestría en Educación en Línea </strong> 
-          | Módulo: Procesos de enseñanza aprendizaje en Entornos Virtuales de Aprendizaje (EVA)
-          | Reto 3. Las competencias digitales
-          | <em>Pablo Gómez</em>
-        </p>
-      </footer>
     </div>
   );
 }
